@@ -5,7 +5,12 @@
 
 > A Loading component for [React](http://facebook.github.io/react/).
 
-### Example Usage
+### Installation
+
+    npm install --save reloading
+
+
+### Usage
 
     var React = require('react');
     var Loading = require('reloading');
@@ -40,14 +45,18 @@
     });
 
 
-### Options
+### Properties
 
 ##### Loading Text
     <Loading shouldShow={this.state.loading} text='Checking your details...' />
 
 
-### Example
+### Development
 Install `http-server` from npm, run it and go to http://127.0.0.1:8080/
 
     npm install -g http-server
     npm run serve
+
+In another tab:
+
+    npm run watch
