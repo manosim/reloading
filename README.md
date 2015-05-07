@@ -1,5 +1,9 @@
-# Re-loading [![Build Status](https://travis-ci.org/ekonstantinidis/reloading.svg?branch=master)](https://travis-ci.org/ekonstantinidis/re-loading)
-A Loading component for ReactJS.
+# Re-loading
+
+[![npm version](https://badge.fury.io/js/reloading.svg)](http://badge.fury.io/js/reloading)
+[![Build Status](https://travis-ci.org/ekonstantinidis/reloading.svg?branch=master)](https://travis-ci.org/ekonstantinidis/re-loading)
+
+> A Loading component for [React](http://facebook.github.io/react/).
 
 ### Example Usage
 
