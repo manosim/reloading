@@ -4,8 +4,10 @@
   "description": "Loading for React.",
   "main": "index.js",
   "scripts": {
-    "build": "browserify -t reactify index.js -o dist/reloading.js",
+    "dist": "browserify -t reactify index.js -o dist/reloading.js",
     "demo": "browserify -t reactify example/demo.js -o example/build/app.js",
+    "watch-demo": "npm run demo && watchify -t reactify example/demo.js -o example/build/app.js -v",
+    "watch-dev": "npm run dist && watchify -t reactify index.js -o dist/reloading.js -v",
     "test": "jsxhint --reporter node_modules/jshint-stylish/stylish.js '*.js'"
   },
   "repository": {
@@ -36,6 +38,7 @@
     "browserify": "^10.1.2",
     "jshint-stylish": "^1.0.1",
     "jsxhint": "^0.14.0",
-    "reactify": "^1.1.0"
+    "reactify": "^1.1.0",
+    "watchify": "^3.2.1"
   }
 }
