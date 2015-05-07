@@ -1,37 +1,22 @@
 var React = require('react');
 
-var loadingStyle = {
-    textAlign: 'center',
-    padding: '5px 0',
-    fontSize: '30px'
-};
+var loadingStyle = {};
 
-var Loading = React.createClass({
+module.exports = React.createClass({
 
-  getInitialState: function () {
-    return {
-      show: this.props.shouldShow,
-      text: this.props.text || "Loading..."
-    };
-  },
-
-  componentWillReceiveProps: function (newProps) {
-    this.replaceState({
-      show: newProps.shouldShow
-    });
-  },
+  displayName: 'Reloading',
 
   render: function () {
-    var loading;
-    if (!this.state.show) {
+    var text = this.props.text ? this.props.text : 'Loading...';
+    if (!this.props.shouldShow) {
       loadingStyle.display = 'none';
     } else {
       loadingStyle.display = 'block';
     }
     return (
-      <div style={loadingStyle}>{this.state.text}</div>
+      React.createElement("div", {style: loadingStyle}, text)
     );
-  }
-});
 
-module.exports = Loading;
+  }
+
+});
