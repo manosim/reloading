@@ -4,6 +4,7 @@
   "description": "A Loading component for ReactJS.",
   "main": "index.js",
   "scripts": {
+    "serve": "http-server 'example/'",
     "build": "mkdir -p example/build/ && browserify -t reactify example/demo.js -o example/build/app.js",
     "watch": "npm run build && watchify -t reactify example/demo.js -o example/build/app.js -v",
     "test": "jsxhint --reporter node_modules/jshint-stylish/stylish.js '*.js'"
