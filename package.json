@@ -1,5 +1,5 @@
 {
-  "name": "re-loading",
+  "name": "reloading",
   "version": "0.0.1",
   "description": "A Loading component for ReactJS.",
   "main": "index.js",
