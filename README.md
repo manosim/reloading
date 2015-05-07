@@ -29,7 +29,7 @@ A Loading component for ReactJS.
         return (
           <div>
             Hello, world! I am a React Loading Component.
-            <Loading shouldShow={this.state.loading} text='Loading... Wont take long!' />
+            <Loading shouldShow={this.state.loading} />
           </div>
         );
       }
@@ -37,8 +37,8 @@ A Loading component for ReactJS.
 
 
 ### Options
-You can set the text that you would like to display when loading by setting the `text` props. More options coming really soon...
 
+##### Loading Text
     <Loading shouldShow={this.state.loading} text='Checking your details...' />
 
 
