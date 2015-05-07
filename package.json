@@ -4,11 +4,12 @@
   "description": "Loading for React.",
   "main": "index.js",
   "scripts": {
+    "serve": "http-server 'example/'",
     "test": "jsxhint --reporter node_modules/jshint-stylish/stylish.js '*.js'"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ekonstantinidis/re-loading.git"
+    "url": "git+https://github.com/ekonstantinidis/reloading.git"
   },
   "keywords": [
     "react",
@@ -21,9 +22,9 @@
   "author": "Emmanouil Konstantinidis",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ekonstantinidis/re-loading/issues"
+    "url": "https://github.com/ekonstantinidis/reloading/issues"
   },
-  "homepage": "https://github.com/ekonstantinidis/re-loading#readme",
+  "homepage": "https://github.com/ekonstantinidis/reloading#readme",
   "peerDependencies": {
     "react": "^0.13.2",
     "react-tools": "^0.13.2"
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "jshint-stylish": "^1.0.1",
-    "jsxhint": "^0.14.0"
+    "jsxhint": "^0.14.0",
+    "http-server": "^0.8.0"
   }
 }
