@@ -1,7 +1,7 @@
 {
   "name": "re-loading",
   "version": "0.0.1",
-  "description": "Loading for React.",
+  "description": "A Loading component for ReactJS.",
   "main": "index.js",
   "scripts": {
     "dist": "browserify -t reactify index.js -o dist/reloading.js",
@@ -23,7 +23,7 @@
     "component"
   ],
   "author": "Emmanouil Konstantinidis",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ekonstantinidis/reloading/issues"
   },

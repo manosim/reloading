@@ -1,5 +1,5 @@
 # Re-loading [![Build Status](https://travis-ci.org/ekonstantinidis/reloading.svg?branch=master)](https://travis-ci.org/ekonstantinidis/re-loading)
-Loading for React.
+A Loading component for ReactJS.
 
 
 ### More
