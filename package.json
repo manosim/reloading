@@ -4,7 +4,8 @@
   "description": "Loading for React.",
   "main": "index.js",
   "scripts": {
-    "serve": "http-server 'example/'",
+    "build": "browserify -t reactify index.js -o dist/reloading.js",
+    "demo": "browserify -t reactify example/demo.js -o example/build/app.js",
     "test": "jsxhint --reporter node_modules/jshint-stylish/stylish.js '*.js'"
   },
   "repository": {
@@ -26,15 +27,15 @@
   },
   "homepage": "https://github.com/ekonstantinidis/reloading#readme",
   "peerDependencies": {
-    "react": "^0.13.2",
-    "react-tools": "^0.13.2"
+    "react": "^0.13.2"
   },
   "dependencies": {
     "font-awesome": "^4.3.0"
   },
   "devDependencies": {
+    "browserify": "^10.1.2",
     "jshint-stylish": "^1.0.1",
     "jsxhint": "^0.14.0",
-    "http-server": "^0.8.0"
+    "reactify": "^1.1.0"
   }
 }

@@ -6,6 +6,7 @@ Loading for React.
 Coming really soon.
 
 ### Example
-Run a server and go to http://127.0.0.1:8080/
+Install `http-server` from npm, run it and go to http://127.0.0.1:8080/
 
+    npm install -g http-server
     npm run serve
