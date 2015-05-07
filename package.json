@@ -27,10 +27,7 @@
   },
   "homepage": "https://github.com/ekonstantinidis/reloading#readme",
   "peerDependencies": {
-    "react": "^0.13.2"
-  },
-  "dependencies": {
-    "font-awesome": "^4.3.0"
+    "react": "*"
   },
   "devDependencies": {
     "browserify": "^10.1.2",
