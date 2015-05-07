@@ -1,41 +1,26 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var React = require('react');
 
-var loadingStyle = {
-    textAlign: 'center',
-    padding: '5px 0',
-    fontSize: '30px'
-};
+var loadingStyle = {};
 
-var Loading = React.createClass({displayName: "Loading",
+module.exports = React.createClass({
 
-  getInitialState: function () {
-    return {
-      show: this.props.shouldShow,
-      text: this.props.text || "Loading..."
-    };
-  },
-
-  componentWillReceiveProps: function (newProps) {
-    this.replaceState({
-      show: newProps.shouldShow
-    });
-  },
+  displayName: 'Reloading',
 
   render: function () {
-    var loading;
-    if (!this.state.show) {
+    var text = this.props.text ? this.props.text : 'Loading...';
+    if (!this.props.shouldShow) {
       loadingStyle.display = 'none';
     } else {
       loadingStyle.display = 'block';
     }
     return (
-      React.createElement("div", {style: loadingStyle}, this.state.text)
+      React.createElement("div", {style: loadingStyle}, text)
     );
-  }
-});
 
-module.exports = Loading;
+  }
+
+});
 
 
 },{"react":157}],2:[function(require,module,exports){
