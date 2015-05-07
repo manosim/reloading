@@ -1,7 +1,14 @@
-# Re-loading [![Build Status](https://travis-ci.org/ekonstantinidis/reloading.svg?branch=master)](https://travis-ci.org/ekonstantinidis/re-loading)
-A Loading component for ReactJS.
+	# Re-loading
+[![npm version](https://badge.fury.io/js/reloading.svg)](http://badge.fury.io/js/reloading)
+[![Build Status](https://travis-ci.org/ekonstantinidis/reloading.svg?branch=master)](https://travis-ci.org/ekonstantinidis/re-loading)
+> A Loading component for [React](http://facebook.github.io/react/).
 
-### Example Usage
+### Installation
+
+    npm install --save reloading
+
+
+### Usage
 
     var React = require('react');
     var Loading = require('reloading');
@@ -36,14 +43,18 @@ A Loading component for ReactJS.
     });
 
 
-### Options
+### Properties
 
 ##### Loading Text
     <Loading shouldShow={this.state.loading} text='Checking your details...' />
 
 
-### Example
+### Development
 Install `http-server` from npm, run it and go to http://127.0.0.1:8080/
 
     npm install -g http-server
     npm run serve
+
+In another tab:
+
+    npm run watch
