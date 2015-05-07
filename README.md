@@ -50,6 +50,12 @@
 ##### Loading Text
     <Loading shouldShow={this.state.loading} text='Checking your details...' />
 
+##### CSS Class
+    <Loading shouldShow={this.state.loading} className='loading-wrapper' />
+
+##### Font Awesome Icon
+    <Loading shouldShow={this.state.loading} faIcon='fa fa-refresh fa-spin' />
+
 
 ### Development
 Install `http-server` from npm, run it and go to http://127.0.0.1:8080/
