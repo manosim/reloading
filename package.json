@@ -1,0 +1,38 @@
+{
+  "name": "re-loading",
+  "version": "0.0.1",
+  "description": "Loading for React.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jsxhint --reporter node_modules/jshint-stylish/stylish.js '*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekonstantinidis/re-loading.git"
+  },
+  "keywords": [
+    "react",
+    "loading",
+    "spinner",
+    "requests",
+    "async",
+    "component"
+  ],
+  "author": "Emmanouil Konstantinidis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ekonstantinidis/re-loading/issues"
+  },
+  "homepage": "https://github.com/ekonstantinidis/re-loading#readme",
+  "peerDependencies": {
+    "react": "^0.13.2",
+    "react-tools": "^0.13.2"
+  },
+  "dependencies": {
+    "font-awesome": "^4.3.0"
+  },
+  "devDependencies": {
+    "jshint-stylish": "^1.0.1",
+    "jsxhint": "^0.14.0"
+  }
+}
