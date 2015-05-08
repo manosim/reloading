@@ -47,6 +47,9 @@
 
 ### Properties
 
+##### Custom Content
+    <Loading shouldShow={this.state.loading}>Your content - images, text, whatever!</Loading>
+
 ##### Loading Text
     <Loading shouldShow={this.state.loading} text='Checking your details...' />
 
