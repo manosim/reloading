@@ -8,14 +8,21 @@ module.exports = React.createClass({
   displayName: 'Reloading',
 
   render: function () {
-    var text = this.props.text ? this.props.text : 'Loading...';
+    var classname = this.props.className ? this.props.className : '';
+    var content = this.props.text ? this.props.text : 'Loading';
+
+    if (this.props.faIcon) {
+      content = React.createElement("i", {className: this.props.faIcon}, '');
+    }
+
     if (!this.props.shouldShow) {
       loadingStyle.display = 'none';
     } else {
       loadingStyle.display = 'block';
     }
+
     return (
-      React.createElement("div", {style: loadingStyle}, text)
+      React.createElement("div", {className: classname, style: loadingStyle}, content)
     );
 
   }
@@ -19797,17 +19804,125 @@ module.exports = require('./lib/React');
 var React = require('react');
 var Loading = require('../');
 
-var App = React.createClass({displayName: "App",
+var loadingStyle = {
+  textAlign: 'center',
+  padding: '10px 0'
+};
+
+var Example1 = React.createClass({displayName: "Example1",
+  getInitialState: function () {
+    return {
+      loading: true
+    };
+  },
+
+  toggleLoading: function () {
+    this.setState({
+      loading: !this.state.loading
+    });
+  },
+
   render: function() {
     return (
-      React.createElement("div", null, 
-        "Hello, world! I am a React thing.", 
-        React.createElement(Loading, {shouldShow: true, text: "Loading... Give it a minute!"})
+      React.createElement("div", {className: "row"}, 
+        React.createElement("h4", null, "Example"), 
+        React.createElement("div", {className: "col-md-8", style: loadingStyle}, 
+          React.createElement(Loading, {shouldShow: this.state.loading}, "Loading... Give it a minute! - ")
+        ), 
+        React.createElement("div", {className: "col-md-4"}, React.createElement("button", {className: "btn btn-block btn-default", onClick: this.toggleLoading}, "Toggle"))
       )
     );
   }
 });
 
-React.render(React.createElement(App, null), document.getElementById('app'));
+React.render(React.createElement(Example1, null), document.getElementById('example1'));
+
+
+var Example2 = React.createClass({displayName: "Example2",
+  getInitialState: function () {
+    return {
+      loading: true
+    };
+  },
+
+  toggleLoading: function () {
+    this.setState({
+      loading: !this.state.loading
+    });
+  },
+
+  render: function() {
+    return (
+      React.createElement("div", {className: "row"}, 
+        React.createElement("h4", null, "Example"), 
+        React.createElement("div", {className: "col-md-8", style: loadingStyle}, 
+          React.createElement(Loading, {shouldShow: this.state.loading, text: "Checking your details..."})
+        ), 
+        React.createElement("div", {className: "col-md-4"}, React.createElement("button", {className: "btn btn-block btn-default", onClick: this.toggleLoading}, "Toggle"))
+      )
+    );
+  }
+});
+
+React.render(React.createElement(Example2, null), document.getElementById('example2'));
+
+
+var Example3 = React.createClass({displayName: "Example3",
+  getInitialState: function () {
+    return {
+      loading: true
+    };
+  },
+
+  toggleLoading: function () {
+    this.setState({
+      loading: !this.state.loading
+    });
+  },
+
+  render: function() {
+    return (
+      React.createElement("div", {className: "row"}, 
+        React.createElement("h4", null, "Example"), 
+        React.createElement("div", {className: "col-md-8", style: loadingStyle}, 
+          React.createElement(Loading, {shouldShow: this.state.loading, className: "example3-loading"})
+        ), 
+        React.createElement("div", {className: "col-md-4"}, React.createElement("button", {className: "btn btn-block btn-default", onClick: this.toggleLoading}, "Toggle"))
+      )
+    );
+  }
+});
+
+React.render(React.createElement(Example3, null), document.getElementById('example3'));
+
+
+var Example4 = React.createClass({displayName: "Example4",
+  getInitialState: function () {
+    return {
+      loading: true
+    };
+  },
+
+  toggleLoading: function () {
+    this.setState({
+      loading: !this.state.loading
+    });
+  },
+
+  render: function() {
+    return (
+      React.createElement("div", {className: "row"}, 
+        React.createElement("h4", null, "Example"), 
+        React.createElement("div", {className: "col-md-8", style: loadingStyle}, 
+          React.createElement(Loading, {shouldShow: this.state.loading, faIcon: "fa fa-refresh fa-spin"})
+        ), 
+        React.createElement("div", {className: "col-md-4"}, React.createElement("button", {className: "btn btn-block btn-default", onClick: this.toggleLoading}, "Toggle"))
+      )
+    );
+  }
+});
+
+React.render(React.createElement(Example4, null), document.getElementById('example4'));
+
 
 },{"../":1,"react":157}]},{},[158]);
