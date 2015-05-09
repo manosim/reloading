@@ -32,4 +32,4 @@ var Example = React.createClass({
   }
 });
 
-React.render(<Example />, document.getElementById('example3'));
+React.render(<Example />, document.getElementById('example-cssclass'));

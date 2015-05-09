@@ -24,7 +24,7 @@ var Example = React.createClass({
       <div className='row'>
         <h4>Example</h4>
         <div className='col-md-8' style={loadingStyle}>
-          <Loading shouldShow={this.state.loading} text='Checking your details...' />
+          <Loading shouldShow={this.state.loading} faIcon='fa fa-refresh fa-spin' />
         </div>
         <div className='col-md-4'><button className='btn btn-block btn-default' onClick={this.toggleLoading}>Toggle</button></div>
       </div>
@@ -32,4 +32,4 @@ var Example = React.createClass({
   }
 });
 
-React.render(<Example />, document.getElementById('example2'));
+React.render(<Example />, document.getElementById('example-icon'));

@@ -33,7 +33,7 @@ var Example = React.createClass({displayName: "Example",
   }
 });
 
-React.render(React.createElement(Example, null), document.getElementById('example1'));
+React.render(React.createElement(Example, null), document.getElementById('example-children'));
 
 
 },{"../../":5,"react":161}],2:[function(require,module,exports){
@@ -71,7 +71,7 @@ var Example = React.createClass({displayName: "Example",
   }
 });
 
-React.render(React.createElement(Example, null), document.getElementById('example3'));
+React.render(React.createElement(Example, null), document.getElementById('example-cssclass'));
 
 
 },{"../../":5,"react":161}],3:[function(require,module,exports){
@@ -109,7 +109,7 @@ var Example = React.createClass({displayName: "Example",
   }
 });
 
-React.render(React.createElement(Example, null), document.getElementById('example4'));
+React.render(React.createElement(Example, null), document.getElementById('example-icon'));
 
 
 },{"../../":5,"react":161}],4:[function(require,module,exports){
@@ -147,7 +147,7 @@ var Example = React.createClass({displayName: "Example",
   }
 });
 
-React.render(React.createElement(Example, null), document.getElementById('example2'));
+React.render(React.createElement(Example, null), document.getElementById('example-text'));
 
 
 },{"../../":5,"react":161}],5:[function(require,module,exports){
