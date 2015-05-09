@@ -1,28 +1,21 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var React = require('react');
 
-var loadingStyle = {};
-
 module.exports = React.createClass({
 
   displayName: 'Reloading',
 
   render: function () {
-    var classname = this.props.className ? this.props.className : '';
-    var content = this.props.text ? this.props.text : 'Loading';
-
-    if (this.props.faIcon) {
-      content = React.createElement("i", {className: this.props.faIcon}, '');
-    }
-
-    if (!this.props.shouldShow) {
-      loadingStyle.display = 'none';
-    } else {
-      loadingStyle.display = 'block';
-    }
+    var content = this.props.text ? this.props.text : 'Loading...';
+    content = this.props.faIcon ? React.createElement("i", {className: this.props.faIcon}, '') : content;
 
     return (
-      React.createElement("div", {className: classname, style: loadingStyle}, content)
+      React.createElement("div", {
+        className: this.props.className,
+        style: {
+          display: this.props.shouldShow ? 'block' : 'none'
+        }
+      }, this.props.children ? this.props.children : content)
     );
 
   }

@@ -1,7 +1,7 @@
 # Reloading
 
 [![npm version](https://badge.fury.io/js/reloading.svg)](http://badge.fury.io/js/reloading)
-[![Build Status](https://travis-ci.org/ekonstantinidis/reloading.svg?branch=master)](https://travis-ci.org/ekonstantinidis/re-loading)
+[![Build Status](https://travis-ci.org/ekonstantinidis/reloading.svg?branch=master)](https://travis-ci.org/ekonstantinidis/reloading)
 
 > A Loading component for [React](http://facebook.github.io/react/).
 
@@ -46,6 +46,9 @@
 
 
 ### Properties
+
+##### Custom Content
+    <Loading shouldShow={this.state.loading}>Your content - images, text, whatever!</Loading>
 
 ##### Loading Text
     <Loading shouldShow={this.state.loading} text='Checking your details...' />
