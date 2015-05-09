@@ -5,6 +5,8 @@
 
 > A Loading component for [React](http://facebook.github.io/react/).
 
+### [Demo](https://ekonstantinidis.github.io/reloading)
+
 ### Installation
 
     npm install --save reloading
