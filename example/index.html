@@ -35,38 +35,13 @@
             <h3>A Loading component for <a href="https://facebook.github.io/react/" target="_blank">React</a>.</h3>
         </div>
 
-        <h3>With Custom Content</h3>
-        <p class="lead">Passing children to the component will override using properties like text & icon.</p>
-        <div class="row">
-            <div class="col-md-6 source">
-                <div class="highlight">
-                    <pre><code class="language-javascript" data-lang="html">&lt;Loading shouldShow={this.state.loading}><br/>    Your content - images, text, whatever!<br/>&lt;/Loading></code></pre>
-                </div>
-            </div>
-            <div class="col-md-6 source"><div id="example1"></div></div>
-        </div>
-        <hr />
-
-
-        <h3>With Text</h3>
-        <p class="lead">Want to only display text? Just use the `text` attribute to pass the text you would like.</p>
-        <div class="row">
-            <div class="col-md-6 source">
-                <div class="highlight">
-                    <pre><code class="language-javascript" data-lang="html">&lt;Loading shouldShow={this.state.loading} text='Checking your details...' /></code></pre>
-                </div>
-            </div>
-            <div class="col-md-6 source"><div id="example2"></div></div>
-        </div>
-        <hr />
-
 
         <h3>With a CSS Class</h3>
         <p class="lead">You can pass a CSS class by using the `className` propertly. Classes can be used with all other properties.</p>
         <div class="row">
             <div class="col-md-6 source">
                 <div class="highlight">
-                    <pre><code class="language-javascript" data-lang="html">&lt;Loading shouldShow={this.state.loading} className='loading-wrapper' /></code></pre>
+                    <pre><code>&lt;Loading<br />  shouldShow={this.state.loading}<br />  className='loading-wrapper' /></code></pre>
                 </div>
             </div>
             <div class="col-md-6 source"><div id="example3"></div></div>
@@ -79,12 +54,39 @@
         <div class="row">
             <div class="col-md-6 source">
                 <div class="highlight">
-                    <pre><code class="language-javascript" data-lang="html">&lt;Loading shouldShow={this.state.loading} faIcon='fa fa-refresh fa-spin' /></code></pre>
+                    <pre><code>&lt;Loading<br />  shouldShow={this.state.loading}<br />  faIcon='fa fa-refresh fa-spin' /></code></pre>
                 </div>
             </div>
             <div class="col-md-6 source"><div id="example4"></div></div>
         </div>
         <hr />
+
+
+        <h3>With Custom Content</h3>
+        <p class="lead">Passing children to the component will override using properties like text & icon.</p>
+        <div class="row">
+            <div class="col-md-6 source">
+                <div class="highlight">
+                    <pre><code>&lt;Loading shouldShow={this.state.loading}><br/>    Your content - images, text, whatever!<br/>&lt;/Loading></code></pre>
+                </div>
+            </div>
+            <div class="col-md-6 source"><div id="example1"></div></div>
+        </div>
+        <hr />
+
+
+        <h3>With Text</h3>
+        <p class="lead">Want to only display text? Just use the `text` attribute to pass the text you would like.</p>
+        <div class="row">
+            <div class="col-md-6 source">
+                <div class="highlight">
+                    <pre><code>&lt;Loading<br />  shouldShow={this.state.loading}<br />  text='Checking your details...' /></code></pre>
+                </div>
+            </div>
+            <div class="col-md-6 source"><div id="example2"></div></div>
+        </div>
+        <hr />
+
 
         <div class="footer">
             <div class="links">
